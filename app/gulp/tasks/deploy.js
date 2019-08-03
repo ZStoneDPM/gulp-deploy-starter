@@ -6,6 +6,6 @@ var deploy = require('gulp-gh-pages');
  * Push build to gh-pages
  */
 gulp.task('deploy', function () {
-  return gulp.src(["./app/dist/**/*", "./app/index.html"])
+  return gulp.src(["./app/**/*","!./app/ignore/**/*"])
     .pipe(deploy())
 });
